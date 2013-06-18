@@ -66,6 +66,12 @@ function catcheverest_scripts() {
 	 	wp_enqueue_script( 'catcheverest-ieltc8', get_template_directory_uri() . '/js/catcheverest-ielte8.min.js', array( 'jquery' ), '20130114', false );	
 		wp_enqueue_style( 'catcheverest-iecss', get_template_directory_uri() . '/css/ie.css' );
 	}
+	wp_enqueue_style( 'catcheverest-bootstrapcss_main', get_template_directory_uri() . '/css/bootstrap.min.css' );
+	wp_enqueue_style( 'catcheverest-bootstrapcss_res', get_template_directory_uri() . '/css/bootstrap-responsive.min.css' );
+	wp_enqueue_style( 'catcheverest-mymain', get_template_directory_uri() . '/css/main.css' );
+
+ 	wp_enqueue_script( 'catcheverest-bootstrapcss', get_template_directory_uri() . '/js/bootstrap.min.js', array( 'jquery' ), '20130614', false );	
+	
 	
 }
 add_action( 'wp_enqueue_scripts', 'catcheverest_scripts' );
@@ -1359,9 +1365,3 @@ function catcheverest_web_clip() {
 //Load Favicon in Header Section
 add_action( 'wp_head', 'catcheverest_web_clip' );
 
-function catcheverest_bootstrap_files() {
-	?>
-
-	<?php
-}
-add_action( 'wp_head', 'catcheverest_bootstrap_files' );
